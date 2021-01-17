@@ -54,6 +54,10 @@ function deleteCheck(e) {
     // DELETE
     if (item.classList[0] === "delete-button") {
         const todo = item.parentElement;
-        todo.remove();
+        //Animations
+        todo.classList.add("fall");
+        todo.addEventListener('transitionend', () => {
+            todo.remove();
+        })
     }
 }

@@ -25,3 +25,13 @@
             <button>delete</button>
             <button>Checked</button>
         </div>
+
+# 4. style todo
+
+# 5. Delete and Mark
+
+    1. lam sao de lay class tai noi minh click chuot, lay value?
+    2. lam sao de delete nguyen 1 div tai noi minh click chuot
+    3. lam sao line-through multiple div tai noi minh click chuot
+
+# 6. Animations

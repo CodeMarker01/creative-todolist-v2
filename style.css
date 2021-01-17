@@ -66,6 +66,8 @@ form button:hover {
   font-size: 1.5rem;
   justify-content: space-between;
   align-items: center;
+
+  transition: all 0.5s ease;
 }
 .todo li {
   flex: 1;
@@ -91,4 +93,8 @@ form button:hover {
 .completed {
   opacity: 0.4;
   text-decoration: line-through;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
 }
