@@ -8,12 +8,33 @@ const item = todoList.children;
 
 // Event Listeners
 todoBtn.addEventListener('click', (event) => {
+    //prevent form from submitting
     event.preventDefault();
+    // Todo DIV
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
+
+    // Todo li
     const newItem = document.createElement("li");
-    newItem.classList.add("item");
-    newItem.innerText = todoInput.value;
+    newItem.classList.add("todo-item");
+    newItem.innerText = `${todoInput.value}`;
     todoInput.value = "";
-    todoList.appendChild(newItem);
+    todoDiv.appendChild(newItem);
+
+    // Check Mark Button
+    const completedBtn = document.createElement("button");
+    completedBtn.classList.add("complete-button");
+    completedBtn.innerHTML = '<i class="fas fa-check-square"></i>';
+    todoDiv.appendChild(completedBtn);
+
+    // Delete Button
+    const deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete-button");
+    deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>'
+    todoDiv.appendChild(deleteBtn);
+
+    // Append to LIST
+    todoList.appendChild(todoDiv);
 })
 
 // Functions
