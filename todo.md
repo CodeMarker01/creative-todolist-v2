@@ -35,3 +35,10 @@
     3. lam sao line-through multiple div tai noi minh click chuot
 
 # 6. Animations
+
+    1. line through and opacity for checked
+    2. drop and remove for delete-btn
+
+# 7. Filtering
+
+    1. create drop down -> <select></select>
