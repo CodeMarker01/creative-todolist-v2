@@ -7,7 +7,11 @@ const todoList = document.querySelector(".todo-list");
 const item = todoList.children;
 
 // Event Listeners
-todoBtn.addEventListener('click', (event) => {
+todoBtn.addEventListener('click', addTodo);
+todoList.addEventListener('click', deleteCheck);
+
+// Functions
+function addTodo(event) {
     //prevent form from submitting
     event.preventDefault();
     // Todo DIV
@@ -35,7 +39,21 @@ todoBtn.addEventListener('click', (event) => {
 
     // Append to LIST
     todoList.appendChild(todoDiv);
-})
+}
 
-// Functions
+function deleteCheck(e) {
+    const item = e.target;
+    // console.log(e.target.className);
 
+    // CHECKED
+    if (item.classList[0] == "complete-button") {
+        const todo = item.parentElement;
+        todo.classList.toggle("completed");
+    }
+
+    // DELETE
+    if (item.classList[0] === "delete-button") {
+        const todo = item.parentElement;
+        todo.remove();
+    }
+}

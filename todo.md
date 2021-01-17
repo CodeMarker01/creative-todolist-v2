@@ -18,7 +18,7 @@
 # 3. functions
 
     1.
-    2. todo
+    2. todo structure
         todo-name button_delete button_checked
         <div class="todo">
             <li></li>
